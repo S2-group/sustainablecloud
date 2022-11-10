@@ -1,6 +1,6 @@
 ---
 layout: default
-bodyClass: "page-home"
+bodyClass: "page-home page-news"
 ---
 
 <div class="intro">
@@ -47,16 +47,25 @@ bodyClass: "page-home"
     <div class="row justify-content-center">
       {% assign limit = site.home.limit_news | default: 6 %}
       {% for news in site.news limit: limit %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="news">
-          {% if news.image %}
-          <div class="page-news news-summary news-image"><img height="150px" alt="{{ news.title }} logo" src="{{ news.image }}" width="{{ news.image.width }}" height="{{ news.image.height }}" /></div>
-          {% endif %}
-          <a href="{{news.website_url | news.url | relative_url}}">
-            <h2 class="news-title">{{ news.title }}</h2>
-          </a>
-          <div class="news-content">{{ news.content | markdownify | strip_html | truncate: 100}}</div>
-        </div>
+      <div class="col-12 col-md-4 col-lg-4 mb-2">
+        <div class="news news-summary news-summary-large" >
+          <div class="news-image">
+              {% if news.image %}
+              <img width="100%" height="auto" class="mb-2" src="{{ news.image | relative_url }}" onerror="this.src='../images/placeholders/no_image.svg';"/>
+              {% endif %}
+          </div>
+          <div class="news-meta">
+              <h2 class="news-name">
+                  {% if news.website_url %}
+                      {% assign url = news.website_url %}
+                  {% else %}
+                      {% assign url = news.url | relative_url %}
+                  {% endif %}                            
+                  <a href="{{url}}">{{ news.title }}</a>
+                  </h2>
+          </div>
+          <div class="news-content">{{ news.subtitle | truncate: 160 | mardownify}}</div>
+      </div>
       </div>
       {% endfor %}
     </div>

@@ -7,11 +7,11 @@ bodyClass: "page-news"
     <div class="row">
         {% assign site_news = site.news| sort: "weight" %}
         {% for news in site_news %}
-        <div class="col-12 col-md-6 mb-2">
-            <div class="news news-summary news-summary-large">
+        <div class="col-12 col-md-4 mb-2">
+            <div class="news news-summary news-summary-large" >
                     <div class="news-image">
                         {% if news.image %}
-                        <img height="220px" class="mb-2" src="{{ news.image | relative_url }}" onerror="this.src='../images/placeholder_dp.png';"/>
+                        <img width="100%" height="auto" class="mb-2" src="{{ news.image | relative_url }}" onerror="this.src='../images/placeholders/no_image.svg';"/>
                         {% endif %}
                     </div>
                 <div class="news-meta">
@@ -24,7 +24,12 @@ bodyClass: "page-news"
                         <a href="{{url}}">{{ news.title }}</a>
                         </h2>
                 </div>
-                <div class="news-content">{{ news.subtitle | truncate: 160 | mardownify}}</div>
+                {% if news.website_url %}
+                    {% assign content = news.subtitle %}
+                {% else %}
+                    {% assign content = news.content %}
+                {% endif %}        
+                <div class="news-content">{{ content | truncate: 80 | mardownify}}</div>
             </div>
         </div>
         {% endfor %}

@@ -26,7 +26,7 @@ bodyClass: "page-teams"
             <div class="team team-summary team-summary-large">
                 {% if team.image %}
                 <div class="team-image">
-                    <img width="90" height="90" class="img-fluid mb-2" src="{{ team.image | relative_url }}" onerror="this.src='../images/placeholder_dp.png';" />
+                    <img width="90" height="90" class="img-fluid mb-2" src="{{ team.image | relative_url }}" onerror="this.src='../images/placeholders/no_image.svg';" />
                 </div>
                 {% endif %}
                 <div class="team-meta">
@@ -48,7 +48,7 @@ bodyClass: "page-teams"
             <div class="team team-summary">
                 {% if team.image %}
                 <div class="team-image">
-                    <img width="90" height="90" alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" onerror="this.src='/images/placeholder_dp.png';" />
+                    <img width="90" height="90" alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" onerror="this.src='/images/placeholders/no_image.svg';" />
                 </div>
                 {% endif %}
                 <div class="team-meta">
