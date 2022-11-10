@@ -1,0 +1,33 @@
+---
+layout: default
+bodyClass: "page-news"
+---
+
+<div class="container pt-6 pb-6">
+    <div class="row">
+        {% assign site_news = site.news| sort: "weight" %}
+        {% for news in site_news %}
+        <div class="col-12 col-md-6 mb-2">
+            <div class="news news-summary news-summary-large">
+                    <div class="news-image">
+                        {% if news.image %}
+                        <img height="220px" class="mb-2" src="{{ news.image | relative_url }}" onerror="this.src='../images/placeholder_dp.png';"/>
+                        {% endif %}
+                    </div>
+                <div class="news-meta">
+                    <h2 class="news-name">
+                        {% if news.website_url %}
+                            {% assign url = news.website_url %}
+                        {% else %}
+                            {% assign url = news.url | relative_url %}
+                        {% endif %}                            
+                        <a href="{{url}}">{{ news.title }}</a>
+                        </h2>
+                </div>
+                <div class="news-content">{{ news.subtitle | truncate: 160 | mardownify}}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+

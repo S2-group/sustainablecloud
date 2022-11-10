@@ -1,0 +1,61 @@
+baseurl: '/sustainablecloud.github.io/'
+permalink: pretty
+title: 'Sustainable Cloud Project'
+
+logo:
+  mobile: "images/logo-title.png"
+  mobile_height: "32px"
+  mobile_width: "32px"
+  desktop: "images/logo-title.png"
+  desktop_height: "40px"
+  desktop_width: "40px"
+
+home:
+  limit_news: 6
+
+collections:
+  research:
+    output: true
+    sort_by: weight
+  team:
+    output: true
+  news:
+    output: true
+    sort_by: weight
+  contact:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
+
+sass:
+  style: compressed # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-environment-variables
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md
