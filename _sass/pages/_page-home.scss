@@ -1,5 +1,23 @@
 .page-home {
 
+    .img {
+        width:100%;
+      }
+      .overlay-text {position: absolute;}
 
+      .container-fluid {
+        position:relative;
+      }
+      
+      .inner {
+        position:absolute;
+        top:5%;
+        left:5%;
+        align-self: flex-start;
+      }
+
+      .title-text{
+        color: $primary;
+      }
 }
 

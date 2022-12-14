@@ -1,11 +1,10 @@
 ---
-title: About
+title: Project
 layout: page
-description: About
-bodyClass: page-about
+description: Project
+bodyClass: page-project
 ---
 
 # Sustainability-Aware Software Architecting for the Future Cloud - The SustainableCloud Project
 
 ![Accounting Services](../images/about/noah-buscher-x8ZStukS2PM-unsplash.jpg)
-
