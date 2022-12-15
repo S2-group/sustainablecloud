@@ -5,4 +5,3 @@ image: "images/news/NWO_Fundings_2022.png"
 promoted: true
 weight: 1
 ---
-nd,san,

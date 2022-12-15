@@ -24,6 +24,8 @@ collections:
     sort_by: weight
   contact:
     output: true
+  about:
+    output: true
 
 defaults:
   - scope:
@@ -41,6 +43,11 @@ defaults:
       type: "news-item"
     values:
       layout: "news-item"
+  - scope:
+      path: ""
+      type: "about"
+    values:
+      layout: "about"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed

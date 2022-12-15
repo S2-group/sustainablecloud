@@ -3,16 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    .team-image {
-      height: 60px;
-      width: 60px;
-      margin-right: 10px;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 60px;
-      }
-    }
+  
     .team-meta {
       flex: 1;
       h2 {
@@ -22,11 +13,12 @@
       }
       p {
         color: $black;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         margin: 0;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
       }
+     
     }
     .team-content {
       margin-top: 20px;
@@ -44,9 +36,13 @@
       margin-right: 20px;
       border-radius: 50%;
       overflow: hidden;
+      -moz-box-shadow: 2px 2px 4px rgb(182, 182, 182);
+      -webkit-box-shadow: 2px 2px 4px rgb(182, 182, 182);
+      box-shadow: 2px 2px 4px rgb(182, 182, 182);
       img {
         width: 90px;
-      }
+        object-fit: cover;    
+        }
     }
   }
 
