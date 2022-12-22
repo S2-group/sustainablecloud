@@ -4,6 +4,8 @@
       <div class="col-12">
         <div class="footer-inner">
           <h2 class="footer-title">{{site.title}}</h2>
+          <h4 class="footer-subtitle" href="about">{{site.data.funding.agency}}</h4>
+
           <ul>
             {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}
             {% for item in footermenu %}

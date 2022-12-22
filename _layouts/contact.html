@@ -1,0 +1,63 @@
+---
+layout: default
+bodyClass: "page-contact"
+---
+
+<div class="intro">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-12 col-md-12 col-lg-12 order-2 order-md-1">
+            <h1>{{page.title}}</h1>
+            <p>{{content}}</p>  
+
+            <form method="post" action="https://forms.un-static.com/forms/901a33e4a89c5fc44c2a259448fe4e2bbdf5279f">
+            <div class="form-group row">
+            <label for="name" class="col-2 col-form-label">Name</label>
+            <div class="col-10">
+                <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <input id="name" name="name" placeholder="Please enter your name" type="text" required="required" class="form-control">
+                </div>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="email" class="col-2 col-form-label">E-mail address</label>
+            <div class="col-10">
+                <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <input id="email" name="email" placeholder="Your e-mail address" type="email" required="required" class="form-control" >
+                </div>
+            </div>
+            </div>
+            <div class="form-group row">
+                <label for="subject" class="col-2 col-form-label">Subject</label>
+                <div class="col-10">
+                    <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <input id="subject" name="subject" placeholder="Subject" type="text" required="required" class="form-control" maxlength = "250">
+                    </div>
+                </div>
+                </div>
+            <div class="form-group row">
+            <label for="message" class="col-2 col-form-label">Message</label>
+            <div class="col-10">
+                <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
+            </div>
+            </div>
+            <div class="form-group row">
+            <div class="offset-2 col-10 page-contact ">
+                <button class="btn-contact" name="submit" type="submit">Send</button>
+                <p><small>(Powered by <a rel="nofollow" href="https://un-static.com/">Un-static Forms</a>)</small></p>
+            </div>
+            </div>
+        </form>
+        </div>
+        </div>
+    </div>
+</div>

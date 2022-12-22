@@ -2,6 +2,8 @@
 layout: default
 bodyClass: "page-news"
 ---
+
+  
 <div class="container pt-6 pb-6">
     <div class="row">
         {% assign site_news = site.news| sort: "weight" %}
@@ -14,21 +16,11 @@ bodyClass: "page-news"
                         {% endif %}
                     </div>
                 <div class="news-meta">
-                    <h2 class="news-name">
-                        {% if news.website_url %}
-                            {% assign url = news.website_url %}
-                        {% else %}
-                            {% assign url = news.url | relative_url %}
-                        {% endif %}          
-                        <a href="{{ url }}">{{ news.title }}</a>
+                    <h2 class="news-name">         
+                        <a href="{{ news.url | relative_url }}">{{ news.title }}</a>
                     </h2>
-                </div>
-                {% if news.website_url %}
-                    {% assign content =  %}
-                {% else %}
-                    {% assign content = news.content %}
-                {% endif %}        
-                <div class="news-content">{{ content | truncate: 80 | mardownify}}</div>
+                </div>      
+                <!-- <div class="news-content"><p>{{ news.content | truncate: 80 | mardownify}}</p></div> -->
             </div>
         </div>
         {% endfor %}
