@@ -14,18 +14,18 @@ bodyClass: "page-research"
         <img height = "00px" width = "auto" alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
       </div>
       {% endif %}
+
+
     </div>
   </div>
 </div>
 
-<div class="container pt-6 pb-6">
+<div class="container pt-12 pb-6">
   <div class="row">
-    {% for research in site.research %}
-    <div class="col-12 col-md-6 mb-3">
-          <h2 >
-            <a href="{{ research.url | relative_url }}">{{ research.title }}</a>
-          </h2>
-          <p>{{ research.content | markdownify | strip_html | truncate: 100 }}</p>
+    {% assign pubs = site.research| sort:{order=ASC, field: "position"}  |%}
+    {% for research in pubs %}
+    <div class="col-12">
+          <p>{{ research.content | markdownify | strip_html |}} <a href="{{research.pub-url}}">[Online]</a></p>
     </div>
     {% endfor %}
   </div>

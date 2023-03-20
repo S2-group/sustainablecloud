@@ -8,5 +8,3 @@ intro_image_hide_on_mobile: true
 ---
 
 # Our Research
-
-Details about our research publications goes here
