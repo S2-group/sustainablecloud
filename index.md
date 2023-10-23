@@ -8,6 +8,6 @@ intro_image: "images/about/noah-buscher-x8ZStukS2PM-unsplash.jpg"
 
 ---
 
-# SustainableCloud Project
+## SustainableCloud Project
 
-Sustainability-aware software architecting for the future cloud
+### Sustainability-aware software architecting for the future cloud

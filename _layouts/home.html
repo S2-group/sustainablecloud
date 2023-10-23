@@ -1,25 +1,33 @@
 ---
 layout: default
-bodyClass: "page-home page-news"
+bodyClass: "page-home page-news page-teams"
 ---
 
-<div class="intro">
+<!-- <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        {{ content }}
-        {% if page.show_call_box %}
-          {% include call.html show_button=true %}
-        {% endif %}
-      </div>
-      {% if page.intro_image %}
+      {% if site.data.home.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
+        <h1>{{ site.data.home.title }}</h1>
+          <h3>{{ site.data.home.sub-title }}</h3> 
+      </div>
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img  alt="{{ site.data.home.title }}" class="intro-image{% if site.data.home.intro_image_absolute %} intro-image-absolute{% endif %}{% if site.data.home.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ site.data.home.intro_image | relURL }}" />
       </div>
       {% endif %}
     </div>
   </div>
+</div> -->
+<div class="intro">
+  <div class="container">
+    <div class="overlay-text">
+      <h1>{{site.data.home.title}}</h1> </br>
+      <p>{{site.data.home.sub-title}}</p>
+    </div>
+    <img src="{{ site.data.home.intro-image | relURL }}" height="auto" width = "100%" display="block" object-fit = "contain" position="relative"/>
+  </div>
 </div>
+
 
 <!-- <div class="strip">
   <div class="container pt-6 pb-6 pb-md-10">
@@ -41,34 +49,112 @@ bodyClass: "page-home page-news"
   </div>
 </div> -->
 
-<!-- {% if site.news %}
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
-      {% assign limit = site.home.limit_news | default: 6 %}
-      {% for news in site.news limit: limit %}
-      <div class="col-12 col-md-4 col-lg-4 mb-2">
-        <div class="news news-summary news-summary-large" >
-          <div class="news-image">
-              {% if news.image %}
-              <img width="100%" height="auto" class="mb-2" src="{{ news.image | relative_url }}" onerror="this.src='../images/placeholders/no_image.svg';"/>
-              {% endif %}
-          </div>
-          <div class="news-meta">
-              <h2 class="news-name">
-                  {% if news.website_url %}
-                      {% assign url = news.website_url %}
-                  {% else %}
-                      {% assign url = news.url | relative_url %}
-                  {% endif %}                            
-                  <a href="{{url}}">{{ news.title }}</a>
-                  </h2>
-          </div>
-          <div class="news-content">{{ news.subtitle | truncate: 160 | mardownify}}</div>
+<!-- About -->
+  <div id="about" class="container pt-12 pb-6">
+    <!-- <h2 class="title">About</h2>  -->
+    <a href="#about"></a>
+    <div class="row funding">
+      <div class="col-lg-10 col-md-4 col-sm-10 col-xs-10">
+        <p>{{site.data.home.funding-text}}</p> </br>
+        <p>{{site.data.home.about}}</p>
       </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <img src="{{ site.data.home.funding-image | relURL }}" height="auto" width = "100%" object-fit = "contain"/>
+        </div>
+
+    </div>
+  </div>
+
+<!-- Research -->
+  <div id="research" class="container pt-12 pb-6">
+    <h4 class="title">Research<a href="#research"></a></h4> 
+    <div class="row">
+      {% assign pubs = site.data.research %} 
+      {% for item in pubs %}
+      <div class="col-12">
+            <p>{{ item.text}} <a href="{{item.url}}">[Online]</a></p>
       </div>
       {% endfor %}
     </div>
   </div>
+  
+<!-- News -->
+  {% if site.news %}
+    <div id="news" class="container pt-6 pb-6">
+      <!-- class="row justify-content-center" -->
+      <h4 class="title">News</h4> <a href="#news"></a>
+      <div class="row justify-content-start">
+        {% assign limit = site.home.limit_news | default: 6 %}
+        {% for news in site.news limit: limit %}
+        <div class="col-12 col-md-4 col-lg-4 mb-2">
+          <div class="news news-summary news-summary-large" >
+            <div class="news-image">
+                {% if news.image %}
+                <img width="100%" height="auto" class="mb-2" src="{{ news.image | relative_url }}" onerror="this.src='../images/placeholders/no_image.svg';"/>
+                {% endif %}
+            </div>
+            <div class="news-meta">
+                <h2 class="news-name">
+                    {% if news.website_url %}
+                        {% assign url = news.website_url %}
+                    {% else %}
+                        {% assign url = news.url | relative_url %}
+                    {% endif %}                            
+                    <a href="{{url}}">{{ news.title }}</a>
+                    </h2>
+            </div>
+            <div class="news-content">{{ news.subtitle | truncate: 160 | mardownify}}</div>
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+<!-- Team -->
+
+<div id="team" class="container pt-6 pb-6">
+  <h4>Our Team</h4> <a href="#team"></a>
+  <div class="row">
+      {% assign promoted_teams = site.team | where: "promoted", true | sort: "weight" %}
+      {% for team in promoted_teams %}
+      <div class="col-12 col-md-6 mb-2">
+          <div class="team team-summary team-summary-large">
+              {% if team.image %}
+              <div class="team-image">
+                  <img height="90" width="auto" class="mb-2" src="{{ team.image | relative_url }}" onerror="this.src='../images/placeholders/no_image.svg';" />
+              </div>
+              {% endif %}
+              <div class="team-meta">
+                  <h2 class="team-name"><a href="{{ team.websiteurl | relative_url }}">{{ team.title }}</a></h2>
+                  <p class="team-description">{{ team.jobtitle }}</p>
+                  <p class="team-affiliation">{{ team.affiliation }}</p>
+                  <!-- {% if team.websiteurl %}
+                  <a target="_blank" href="{{ team.websiteurl }}" rel="noreferrer">Website</a>
+                  {% endif %} -->
+              </div>
+              <div class="team-content">{{ team.content | truncate: 120 }}</div>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+  <div class="row pt-6 pb-6">
+      {% assign teams = site.team | where: "promoted", empty | sort: "weight" %}
+      {% for team in teams %}
+      <div class="col-12 col-md-4 mb-3">
+          <div class="team team-summary">
+              {% if team.image %}
+              <div class="team-image">
+                  <img width="90" height="90" alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" onerror="this.src='/images/placeholders/no_image.svg';" />
+              </div>
+              {% endif %}
+              <div class="team-meta">
+                <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ team.title }}</a></h2>
+                <p class="team-description">{{ team.description }}</p>
+                  <p class="team-description">{{ team.affiliation }}</p>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
 </div>
-{% endif %} -->

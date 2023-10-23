@@ -4,7 +4,8 @@
       <div class="col-12">
         <div class="footer-inner">
           <h2 class="footer-title">{{site.title}}</h2>
-          <h4 class="footer-subtitle" href="about">{{site.data.funding.agency}}</h4>
+          <h4 class="footer-subtitle" href="about">{{site.data.home.agency}}</h4>
+          {% if site.data.menus.footer %}
 
           <ul>
             {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}
@@ -14,6 +15,7 @@
             </li>
             {% endfor %}
           </ul>
+          {% endif %}
         </div>
       </div>
     </div>

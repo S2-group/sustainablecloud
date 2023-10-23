@@ -6,25 +6,15 @@ main:
   #   url: "/project"
   #   weight: 2
   - name: "Research"
-    url: "/research/"
+    url: "#research"
     weight: 2
   - name: "Team"
-    url: "/team/"
+    url: "#team"
     weight: 3
   - name: "News"
-    url: "/news/"
+    url: "#news"
     weight: 4
   - name: "About"
-    url: "/about/"
+    url: "#about"
     weight: 5
-  - name: "Contact"
-    url: "/contact/"
-    weight: 6
 
-footer:
-  - name: "Home"
-    url: "/"
-    weight: 1
-  - name: "Contact"
-    url: "/contact/"
-    weight: 2
