@@ -3,10 +3,9 @@
     .img {
         width:100%;
       }
-      // .overlay-text {position: absolute;}
-
       .container-fluid {
         position:relative;
+        margin-bottom: 2%;
       }
       
       .inner {
@@ -20,22 +19,34 @@
         color: $primary;
       }
 
-      .overlay-text {
+      .img-container{
+        position: absolute;  
+        height: fit-content;
+      }
+
+      .text-overlay {
         position: absolute;
-        top: 25%; 
-        left: 50%; 
-        transform: translate(-50%, -50%); 
         text-align: center;
+        width: 100%;
+        align-self: center;
       }
-      .overlay-text p{
-        color: #ffffff;
+      .text-overlay > p {
+        color: white;
+        width: 100%;
       }
-      .overlay-text h1{
-        color: #ffffff;
-        font-size: xx-large;
+      .text-overlay > h1 {
+        color: white;
+        width: 100%;
+        font-family: sans-serif;
       }
-      
       h4{
         font-size: x-large;
+      }
+      .separator{
+        width: 40%;
+        color: green;
+        margin-bottom: 2%;
+        margin-top: 2%;
+
       }
 }
