@@ -1,16 +1,39 @@
-
-[ 
+[
   {
-    "text":"Fatima, I., & Lago, P. (Accepted/In press). Towards a Sustainability-aware Software Architecture Evaluation for Cloud-Based Software Services. In 1st International Workshop on Quality in Software Architecture
-    co-located with ECSA 2023",
-    "url": "https://research.vu.nl/en/publications/towards-a-sustainability-aware-software-architecture-evaluation-f"
+    "text": "Fatima, I., Lago, P., Andrikopoulos, V., & van der Waaij, B. (2025). Using sustainability impact scores for software architecture evaluation. arXiv preprint arXiv:2501.17004.",
+    "url": "https://arxiv.org/abs/2501.17004"
   },
   {
-    "text": "Fatima, I., & Lago, P. A Review of Software Architecture Evaluation Methods for Sustainability Assessment. In 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C). IEEE.",
-    "url": "https://research.vu.nl/en/publications/a-review-of-software-architecture-evaluation-methods-for-sustaina"
+    "text": "Lago, P., Condori Fernandez, N., Fatima, I., et al. (2024). The sustainability assessment framework toolkit: A decade of modeling experience. Software & Systems Modeling.",
+    "url": "https://doi.org/10.1007/s10270-024-01230-9"
   },
   {
-    "text": "Fatima, I. Sustainability-Aware Software Architecting for the Future Cloud. In 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C) IEEE.",
-    "url": "https://research.vu.nl/en/publications/sustainability-aware-software-architecting-for-the-future-cloud"
+    "text": "Fatima, I., Funke, M., & Lago, P. (2024). Providing guidance to software practitioners: A framework for creating KPIs. IEEE Software.",
+    "url": "https://doi.org/10.1109/MS.2024.3456446"
+  },
+  {
+    "text": "Fatima, I., & Lago, P. (2024). Software architecture assessment for sustainability: A case study. In Galster, M., Scandurra, P., Mikkonen, T., Oliveira Antonino, P., Nakagawa, E. Y., & Navarro, E. (Eds.), Software architecture. ECSA 2024 (Vol. 14889). Springer, Cham.",
+    "url": "https://doi.org/10.1007/978-3-031-70797-1_16"
+  },
+  {
+    "text": "Banijamali, P., Fatima, I., Lago, P., & Heitlager, I. (2024). Unveiling key performance indicators for the energy efficiency of cloud data storage. 2024 IEEE 21st International Conference on Software Architecture Companion (ICSA-C), Hyderabad, India, 222-229.",
+    "url": "https://doi.org/10.1109/ICSA-C63560.2024.00047"
+  },
+  {
+    "text": "Bamiduro, M., Fatima, I., Lago, P., & Vos, S. (Accepted/In press). Challenges in incorporating sustainability practices in the software lifecycle. In Software Business. ICSOB 2024 (Lecture Notes in Business Information Processing). Springer Nature.",
+    "url": "https://hdl.handle.net/1871.1/5f43a66a-f552-4617-97e3-b8fcd5376b43"
+  },
+  {
+    "text": "Fatima, I., & Lago, P. (2023). Towards a sustainability-aware software architecture evaluation for cloud-based software services. In 1st International Workshop on Quality in Software Architecture, co-located with ECSA 2023.",
+    "url": "https://hdl.handle.net/1871.1/441e98d5-a88b-4eb0-a020-7811a595c599"
+  },
+  {
+    "text": "Fatima, I., & Lago, P. (2023). A review of software architecture evaluation methods for sustainability assessment. In 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C). IEEE.",
+    "url": "https://hdl.handle.net/1871.1/65bc3e02-b424-405b-a206-8dcaab0c217a"
+  },
+  {
+    "text": "Fatima, I. (2023). Sustainability-aware software architecting for the future cloud. In 2023 IEEE 20th International Conference on Software Architecture Companion (ICSA-C). IEEE.",
+    "url": "https://hdl.handle.net/1871.1/32147c8a-d3b8-41ff-806f-ed9a0a98744b"
   }
 ]
+r

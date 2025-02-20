@@ -75,7 +75,20 @@ bodyClass: "page-home page-news page-teams"
       {% assign pubs = site.data.research %} 
       {% for item in pubs %}
       <div class="col-12">
-            <p>{{ item.text}} <a href="{{item.url}}">[Online]</a></p>
+            <p>{{ item.text}} <a href="{{item.url}}">{{item.url}}</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Datasets -->
+  <div id="datasets" class="container pt-12 pb-6">
+    <h4 class="title">Datasets<a href="#datasets"></a></h4> 
+    <div class="row">
+      {% assign pubs = site.data.datasets %} 
+      {% for item in pubs %}
+      <div class="col-12">
+            <p>{{ item.text}} <a href="{{item.url}}">{{item.url}}</a></p>
       </div>
       {% endfor %}
     </div>
